@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html>
+    <style>
+        h2
+        {text-shadow: 5px 5px 5px #FFFFFF;}
+    </style>
+
+<head>
+  <title>Front</title>
+
+</head>
+<body background="11500.jpg"width= “5000” height=“4000”>
+
+    <div align="center">
+
+        <h2>PIMPISA KERDDAENG A-TIT</h2>
+        <div class="w3-content" style="max-width:1000px;position:relative">
+       <img class="mySlides" src="S__71237680.jpg"<img src="url" width="400px" height="500px">
+       <img class="mySlides" src="S__71237679.jpg"<img src="url" width="800px" height="500px">
+       <img class="mySlides" src="S__71237682.jpg"<img src="url" width="500px" height="500px">
+       <img class="mySlides" src="S__71237684.jpg"<img src="url" width="400px" height="500px">
+       <img class="mySlides" src="S__71237695.jpg"<img src="url" width="400px" height="500px">
+       <img class="mySlides" src="S__71237701.jpg"<img src="url" width="400px" height="500px">
+       <img class="mySlides" src="S__71237700.jpg"<img src="url" width="790px" height="500px">
+       <div align="left"><a class="floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">&#10094;</a></div>
+       <div align="right"><a class="floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(+1)">&#10095;</a></div>
+       </div>
+
+
+
+        <button class="bt" onclick="currentDiv(1)"> </button>
+        <button class="bt" onclick="currentDiv(2)"> </button>
+        <button class="bt" onclick="currentDiv(3)"> </button>
+        <button class="bt" onclick="currentDiv(4)"> </button>
+        <button class="bt" onclick="currentDiv(5)"> </button>
+        <button class="bt" onclick="currentDiv(6)"> </button>
+        <button class="bt" onclick="currentDiv(7)"> </button>
+
+    <script>
+        var slideIndex = 1;
+            showDivs(slideIndex);
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" white", "");
+        }
+            x[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " white";
+    }
+    </script>
+    </div>
+</body>
+</html>
